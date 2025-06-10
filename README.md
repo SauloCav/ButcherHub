@@ -1,5 +1,9 @@
 # ButcherHub
 
+<p align="center">
+  <img src="https://github.com/SauloCav/ButcherHub/blob/main/ButcherHub-frontend/src/assets/logo.png" alt="ButcherHub Logo" width="500"/>
+</p>
+
 ### Bem vindo ao ButcherHub!
 #### Seu Sistema completo para gerenciamento de carnes, compradores e pedidos!
 
