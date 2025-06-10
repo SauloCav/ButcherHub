@@ -1,0 +1,16 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ButcherHub.Domain.Models;
+
+public class UpdateBuyerModel
+{
+    public string Name { get; set; } = string.Empty;
+
+    public string DocumentNumber { get; set; } = string.Empty;
+
+    [Required]
+    public required string City { get; set; }
+
+    [Required]
+    public required string State { get; set; }
+}
