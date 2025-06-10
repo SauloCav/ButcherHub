@@ -1,0 +1,139 @@
+.tableContainer {
+  overflow-x: auto;
+  border-radius: 6px;
+}
+
+.table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0 0.5rem;
+}
+
+.table th,
+.table td {
+  padding: 0.5rem;
+  text-align: center;   
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.table thead {
+  background-color: #477de9; 
+}
+
+.table thead th {
+  color: #fff;        
+}
+
+.tableRow:nth-child(even) {
+  background-color: #fbfcfe;
+}
+
+.tableRow:hover {
+  background-color: #eef2ff;
+}
+
+.editButton,
+.deleteButton {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.editButton {
+  background-color: #2684ff;
+  color: #fff;
+}
+
+.editButton:hover {
+  background-color: #1861c0;
+}
+
+.deleteButton {
+  background-color: #ff5630;
+  color: #fff;
+}
+
+.deleteButton:hover {
+  background-color: #e24928;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.pageButton {
+  background-color: #0052cc;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pageButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pageButton:hover:not(:disabled) {
+  background-color: #0041a8;
+}
+
+.pageInfo {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.emptyMessage {
+  text-align: center;
+  padding: 2rem;
+  color: #777;
+}
+
+.actions {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  gap: 0.5rem;  
+}
+
+.iconButton {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.editButton {
+  color: #0052cc;
+}
+
+.editButton:hover {
+  background-color: rgba(0, 82, 204, 0.1);
+}
+
+.deleteButton {
+  color: #d93025;
+}
+
+.deleteButton:hover {
+  background-color: rgba(217, 48, 37, 0.1);
+}
