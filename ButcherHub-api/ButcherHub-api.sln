@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButcherHub-api", "ButcherHub-api\ButcherHub-api.csproj", "{907BE7AC-0E94-450E-9CE8-40FE8C8352CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ButcherHub-api", "ButcherHub-api\ButcherHub-api.csproj", "{907BE7AC-0E94-450E-9CE8-40FE8C8352CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButcherHub.Application", "ButcherHub.Application\ButcherHub.Application.csproj", "{E8D1978A-1EFA-42DA-99E2-371CA49A60BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButcherHub.Domain", "ButcherHub.Domain\ButcherHub.Domain.csproj", "{8C56D576-C4E3-465C-86A8-2A781410F235}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButcherHub.Infrastructure", "ButcherHub.Infrastructure\ButcherHub.Infrastructure.csproj", "{AC91BB94-AFD7-4DB6-B19F-55F84B92815A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButcherHub.Shared", "ButcherHub.Shared\ButcherHub.Shared.csproj", "{5F8AB8CD-6456-4A56-9896-3849FCE23B11}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +23,22 @@ Global
 		{907BE7AC-0E94-450E-9CE8-40FE8C8352CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{907BE7AC-0E94-450E-9CE8-40FE8C8352CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{907BE7AC-0E94-450E-9CE8-40FE8C8352CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8D1978A-1EFA-42DA-99E2-371CA49A60BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8D1978A-1EFA-42DA-99E2-371CA49A60BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8D1978A-1EFA-42DA-99E2-371CA49A60BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8D1978A-1EFA-42DA-99E2-371CA49A60BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C56D576-C4E3-465C-86A8-2A781410F235}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C56D576-C4E3-465C-86A8-2A781410F235}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C56D576-C4E3-465C-86A8-2A781410F235}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C56D576-C4E3-465C-86A8-2A781410F235}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC91BB94-AFD7-4DB6-B19F-55F84B92815A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC91BB94-AFD7-4DB6-B19F-55F84B92815A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC91BB94-AFD7-4DB6-B19F-55F84B92815A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC91BB94-AFD7-4DB6-B19F-55F84B92815A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F8AB8CD-6456-4A56-9896-3849FCE23B11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F8AB8CD-6456-4A56-9896-3849FCE23B11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F8AB8CD-6456-4A56-9896-3849FCE23B11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F8AB8CD-6456-4A56-9896-3849FCE23B11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
