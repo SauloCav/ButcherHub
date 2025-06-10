@@ -1,15 +1,38 @@
+using ButcherHub.Application.Services;
+using ButcherHub.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
+using ButcherHub.Domain.Interfaces.Services;
+using ButcherHub.Domain.Interfaces.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Services.AddControllers()
+.AddJsonOptions(opts =>{opts.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;});
+builder.Services.AddDbContext<AppDbContext>(opt =>
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddScoped<IMeatRepository, MeatRepository>();
+builder.Services.AddScoped<IMeatService, MeatService>();
+builder.Services.AddScoped<IBuyerRepository, BuyerRepository>();
+builder.Services.AddScoped<IBuyerService, BuyerService>();
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy
+          .WithOrigins("http://localhost:5173")
+          .AllowAnyMethod()
+          .AllowAnyHeader();
+    });
+});
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -20,6 +43,10 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+app.MapControllers();
+app.UseCors("AllowFrontend");
+
+app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
